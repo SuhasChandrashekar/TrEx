@@ -1,0 +1,42 @@
+.Companylogo{
+  background-image: url(../../assets/images/companylogo.png);
+    height: 70px;
+    width: 68px;
+    background-size: 101%;
+    margin-left: 3em;
+}
+#homeHeader{
+  background-color:#3a3937;
+  position: relative;
+
+}
+.navlinks{
+  color: white !important;
+  margin-right: 2em;
+}
+.navlinks > a{
+  color: white;
+}
+.navBar{
+  padding-top: 1.5em;
+    position: relative;
+    left: 9em;
+}
+
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 20;
+  opacity: 0;
+  background: rgba(39, 42, 43, 0.8);
+  transition: opacity 200ms ease-in-out;
+  border-radius: 4px;
+  margin: -15px 0 0 -15px;
+  height: 34em;
+  width: 100em;
+  top: 5.3em;
+}
+
+

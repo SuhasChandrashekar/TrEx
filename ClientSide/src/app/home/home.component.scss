@@ -1,0 +1,219 @@
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: #f1f9f9;
+}
+
+#app-cover {
+  float: left;
+  display: table;
+  width: 600px;
+  margin: 80px auto;
+  counter-reset: button-counter;
+  size: 60%;
+  position: relative;
+  bottom: 37em;
+  left: -6em;
+}
+
+.toggle-button-cover {
+  display: table-cell;
+  position: relative;
+  width: 200px;
+  height: 140px;
+  box-sizing: border-box;
+  right: 17em;
+}
+
+.button-cover {
+  height: 100px;
+  width: 38.8em;
+  margin: 20px;
+  background-color: #fff;
+  box-shadow: 0 10px 20px -8px #c5d6d6;
+  border-radius: 4px;
+}
+
+.button-cover:before {
+  counter-increment: button-counter;
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #d7e3e3;
+  font-size: 12px;
+  line-height: 1;
+  padding: 5px;
+}
+
+.button-cover,
+.knobs,
+.layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.button {
+  position: relative;
+  top: 50%;
+  width: 74px;
+  height: 36px;
+  margin: -20px auto 0 auto;
+  overflow: hidden;
+}
+
+.button.r,
+.button.r .layer {
+  border-radius: 100px;
+}
+
+.button.b2 {
+  border-radius: 2px;
+}
+
+.checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.knobs {
+  z-index: 2;
+}
+
+.layer {
+  width: 100%;
+  background-color: #ebf7fc;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+
+/* Button 1 */
+
+#button-1 .knobs:before {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 30px;
+  height: 29px;
+  color: #fff;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 9px 4px;
+  background-color: rgb(67, 207, 154);
+  border-radius: 50%;
+  transition: 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15) all;
+}
+
+#button-1 .checkbox:checked+.knobs:before {
+  content: '';
+  left: 42px;
+  background-color: #3672f4;
+}
+
+#button-1 .checkbox:checked~.layer {
+  background-color: #fcebeb;
+}
+
+#button-1 .knobs,
+#button-1 .knobs:before,
+#button-1 .layer {
+  transition: 0.3s ease all;
+}
+
+.toggle_Section {
+  display: inline-block;
+  position: relative;
+  top: 3em;
+  left: 9em;
+  margin-right: 3em;
+}
+
+.entity_img {
+  max-width: 100%;
+  max-height: 100%;
+  size: 10em;
+}
+
+.booking_btn {
+  left: 18em;
+    top: 0.5em;
+    width: 6.5em;
+    position: relative;
+}
+
+.homebody_class{
+  position: relative;
+  top: 32em;
+  left: 6em;
+}
+#map {
+  height: 24em;
+  width: 25em;
+  float: right;
+  size: 35%;
+  right: 6em;
+  bottom: 29em;
+  margin-top: 6em;
+}
+
+
+#homeBody{
+position: relative;
+bottom: 5em;
+}
+// .entity_item :hover{
+//   background-color:gray;
+// }
+.toggle_header{
+  left: 16em;
+  position: relative;
+}
+.fit-image{
+  width: 100%;
+  object-fit: cover;
+  height: 300px; /* only if you want fixed height */
+  }
+
+  .entity_item{
+    background: white;
+    margin-bottom: 3em;
+    height: 13em;
+    width: 38em;
+    padding: 2em 0.5em 1.5em 0.5em;
+  }
+  .entity_item:hover{
+    box-shadow: 0 10px 20px -8px #9a9e9e;
+    cursor: pointer;
+  }
+  .search-wrapper {
+    display: flex;
+    justify-content: center;
+    height: 3em;
+    top: -6em;
+    left: 27em;
+    position: relative;
+    width: 24em;
+  }
+.search_btnn{
+  margin-left: 2em;
+  height: 2.5em;
+  width: 8em;
+  border-radius: 6px;
+}

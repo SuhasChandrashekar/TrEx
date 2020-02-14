@@ -1,0 +1,74 @@
+<div>
+    <h2>Your Details</h2>
+</div>
+<div *ngFor="let a of users | details : queryUserString">
+    <div class="container">
+        <span>
+            <div>
+                <div>
+                    <i class="fa fa-user"></i><span class="userDetail"> Full Name</span>
+                    <button class="upt_btn" (click)="update()">Update</button>
+                </div>
+                <a (click)="edit(a)">
+                    <span class="input_editoption" *ngIf="a!==editUser">Firstname:{{a.userFirstname}} </span>
+                    <input class="input_editoption" *ngIf="a===editUser" [(ngModel)]="a.userFirstname"
+                        (keyup.enter)="update()">
+                </a>
+                <a (click)="edit(a)">
+                    <span class="input_editoption" *ngIf="a!==editUser">Lastname: {{a.userLastname}}</span>
+                    <input class="input_editoption" *ngIf="a===editUser" [(ngModel)]="a.userLastname"
+                        (keyup.enter)="update()">
+                </a>
+            </div>
+            <div>
+                <div>
+                    <span class="userDetail">Date of Birth</span>
+                </div>
+                <a (click)="edit(a)">
+                    <span class="input_editoption" *ngIf="a!==editUser">{{a.userDOB}}</span>
+                    <input type="date" *ngIf="a===editUser" [(ngModel)]="a.userDOB" (keyup.enter)="update()">
+                </a>
+            </div>
+            <div>
+                <div>
+                    <i class="fa fa-address-card-o"></i><span class="userDetail"> Address</span>
+                </div>
+                <a (click)="edit(a)">
+                    <span class="input_editoption" *ngIf="a!==editUser">{{a.userAddress}}</span>
+                    <input class="input_editoption" *ngIf="a===editUser" [(ngModel)]="a.userAddress"
+                        (keyup.enter)="update()">
+                </a>
+            </div>
+            <div>
+                <div>
+                    <span class="userDetail">City</span>
+                </div>
+                <a (click)="edit(a)">
+                    <span class="input_editoption" *ngIf="a!==editUser">{{a.userCity}}</span>
+                    <input class="input_editoption" *ngIf="a===editUser" [(ngModel)]="a.userCity"
+                        (keyup.enter)="update()">
+                </a>
+            </div>
+            <div>
+                <div>
+                    <span class="userDetail">State</span>
+                </div>
+                <a (click)="edit(a)">
+                    <span class="input_editoption" *ngIf="a!==editUser">{{a.userState}}</span>
+                    <input class="input_editoption" *ngIf="a===editUser" [(ngModel)]="a.userState"
+                        (keyup.enter)="update()">
+                </a>
+            </div>
+            <div>
+                <div>
+                    <i class="fa fa-phone"></i><span class="userDetail"> Contact</span>
+                </div>
+                <a (click)="edit(a)">
+                    <span class="input_editoption" *ngIf="a!==editUser">{{a.userPhoneNumber}}</span>
+                    <input class="input_editoption" *ngIf="a===editUser" [(ngModel)]="a.userPhoneNumber"
+                        (keyup.enter)="update()">
+                </a>
+            </div>
+        </span>
+    </div>
+</div>

@@ -1,0 +1,36 @@
+<div class="row connect_header"><h3>Connect and chat</h3></div>
+<div class="chatWindow">
+<div class="container chat_window">
+<div class="row" *ngFor="let todo of connect">
+  <div class="row right_side" *ngIf="todo.name === actualUser" >
+      <div class="chat_list active_chat sent_msg">
+          <div class="chat_people">
+            <div class="chat_img"> <img class="img_profile_icon" src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+            <div class="chat_ib">
+              <h5>{{todo.name}}<span class="chat_date">Dec 25</span></h5>
+              <p>{{todo.message}}</p>
+            </div>
+          </div>
+        </div>
+</div>
+<div class="row left_side" *ngIf="todo.name !== actualUser" >
+    <div class="chat_list active_chat ">
+        <div class="chat_people">
+          <div class="chat_img"> <img class="img_profile_icon" src="https://ptetutorials.com/images/user-profile.png" alt="sunil"> </div>
+          <div class="chat_ib">
+            <h5>{{todo.name}}<span class="chat_date">Dec 25</span></h5>
+            <p>{{todo.message}}</p>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</div>
+</div>
+</div>
+<div class=" container input_Section">
+    <div class="row">
+        <input type="text" class="form-control cls_user_msg" id="userMsg">
+        <button id="msgButton" class="btn btn-primary" (click)="sendMsg()">Send</button>
+        </div>
+</div>

@@ -1,0 +1,16 @@
+<!--HamBurger Icon-->
+<div class="bars" id="nav-action">
+    <span class="bar"> </span>
+</div>
+
+<!--Navbar Links-->
+<nav id="nav">
+    <ul>
+        <li class="shape-circle circle-one" (click)="closenavhome()"><a href="home">Home</a></li>
+        <li class="shape-circle circle-two" (click)="closenavSignIn()"><a href="login">SignUp/LogIn</a></li>
+        <li class="shape-circle circle-three" (click)="closenavbookings()"><a href="profile">My Bookings</a></li>
+        <li class="shape-circle circle-five" (click)="closenavprofile()"><a href="details">Profile</a></li>
+
+    </ul>
+</nav>
+<router-outlet></router-outlet>

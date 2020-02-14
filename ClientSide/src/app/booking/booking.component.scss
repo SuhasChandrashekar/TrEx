@@ -1,0 +1,287 @@
+.entity_img {
+    max-width: 100%;
+    max-height: 100%;
+    size: 30em;
+    background-size: cover;
+}
+
+#entity_Details {
+  position: relative;
+  height: 33em;
+  width: 72em;
+  left: 5em;
+  box-shadow: 0 10px 20px -8px #9a9e9e;
+}
+
+#carousel {
+    margin-top: 50px;
+}
+
+.carousel {
+    height: 500px;
+    margin-bottom: 60px;
+}
+
+
+/* Since positioning the image, we need to help out the caption */
+
+.carousel-caption {
+    z-index: 10;
+}
+
+
+/* Declare heights because of positioning of img element */
+
+.carousel .item {
+    width: 100%;
+    height: 0em;
+    background-color: #777;
+}
+
+.carousel-inner>.item>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 500px;
+}
+
+@media (min-width: 768px) {
+    .carousel-caption p {
+        margin-bottom: 20px;
+        font-size: 21px;
+        line-height: 1.4;
+    }
+}
+
+.left_Section {
+
+    position: relative;
+    top: 2em;
+    height: 10em;
+    padding: 2em;
+}
+
+.right_Section {
+
+    position: relative;
+    top: 2em;
+    padding: 2em;
+    height: 10em;
+}
+
+.booking_SecHeading {
+  left: 23.5em;
+  top: 1em;
+  position: relative;
+}
+
+form {
+    width: 52em;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.value-button {
+    display: inline-block;
+    border: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 11px 0;
+    background: #eee;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.value-button:hover {
+    cursor: pointer;
+}
+
+form #decrease {
+  margin-left: 0px;
+  border-radius: 20px 0 0 20px;
+  height: 2.4em;
+  padding: 0.3em;
+  bottom: 0.1em;
+  position: relative;
+  background: lightblue;
+}
+
+form #increase {
+  margin-left: 0px;
+  border-radius: 0 20px 20px 0;
+  height: 2.4em;
+  padding: 0.3em;
+  bottom: 0.1em;
+  position: relative;
+  background: lightblue;
+}
+
+form #input-wrap {
+    margin: 0px;
+    padding: 0px;
+}
+
+input#number {
+    text-align: center;
+    border: none;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin: 0px;
+    width: 40px;
+    height: 40px;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.inc_dec_section {}
+
+//CSS for review order and card payment
+.row {
+    display: -ms-flexbox;
+    /* IE10 */
+    display: flex;
+    -ms-flex-wrap: wrap;
+    /* IE10 */
+    flex-wrap: wrap;
+    margin: 0 -16px;
+}
+
+.col-25 {
+    -ms-flex: 25%;
+    /* IE10 */
+    flex: 25%;
+}
+
+.col-50 {
+    -ms-flex: 50%;
+    /* IE10 */
+    flex: 50%;
+}
+
+.col-75 {
+    -ms-flex: 75%;
+    /* IE10 */
+    flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+    padding: 0 16px;
+}
+
+.container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+}
+
+input[type=text] {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+label {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.icon-container {
+    margin-bottom: 20px;
+    padding: 7px 0;
+    font-size: 24px;
+}
+
+.btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    width: 100%;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+span.price {
+    float: right;
+    color: grey;
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
+
+@media (max-width: 800px) {
+    .row {
+        flex-direction: column-reverse;
+    }
+    .col-25 {
+        margin-bottom: 20px;
+    }
+}
+.max-width-1024 { max-width: 1024px; margin: 0 auto; }
+
+.paymentSection{
+  position: relative;
+  top: 2em;
+  box-shadow: 0 10px 20px -8px #9a9e9e;
+}
+.ticketSection{
+  position: relative;
+  top: 3em;
+  box-shadow: 0 10px 20px -8px #9a9e9e;
+  margin-bottom: 4em;
+
+}
+
+.num_tickets{
+  position: relative;
+    top: 3.5em;
+    left: 24.5em;
+}
+.booking_compo{
+  scroll-behavior: smooth;
+}
+.book_button_Section{
+  height: 6em;
+  top: 5em;
+}
+.c_carousal_prop{
+  height: 25em;
+}
+.cls_carouselExampleIndicators{
+  height: 18em;
+}
+html {
+  scroll-behavior: smooth;
+}
+.booking_compo{
+  position: relative;
+}
+.share_icon_section{
+  position: relative;
+    top: 7em;
+    left: 4em;
+}

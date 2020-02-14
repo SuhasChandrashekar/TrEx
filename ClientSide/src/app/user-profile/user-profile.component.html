@@ -1,0 +1,48 @@
+<div>
+    <h2>Booking Details</h2>
+</div>
+
+<div *ngFor="let a of bookings | profilePipe : queryMailString">
+    <div class="container">
+        <span>
+            <span>
+                    <button class="btn_sty btnDanger" title="delete booking" (click)="delete(a)">Cancel Booking</button>
+                <h4>Booking ID : {{a.bookingId}}</h4>
+            </span>
+            <div class="row">
+                    <div class="col-lg-12">{{a.entityName}}</div>
+            </div>
+            <span class="name">Further Details:</span>
+            <div class="row">
+                    <div class="col-lg-12">Type: {{a.entityType}}</div>
+            </div>
+            <span class="name">Name</span>
+            <div class="row">
+                    <div class="col-lg-12">{{a.firstName}} {{a.lastName}}</div>
+                    <div class="col-lg-12">Ph: {{a.userPhoneNumber}}</div>
+            </div>
+            <span class="name">Address</span>
+            <div class="row">
+                    <div class="col-lg-12">{{a.userAddress}}</div>
+            </div>
+            <span class="name">Number of Tickets</span>
+            <div>
+                    <span class="box">
+                        <span class="input_editoption" *ngIf="a!==editBooking">{{a.ticketsBooked}}</span>
+                        <input class="input_editoption" *ngIf="a===editBooking" [(ngModel)]="a.ticketsBooked"
+                            (keyup.enter)="update()">
+                    </span>
+                    <button class="btn_edit" (click)="edit(a)">Edit</button>
+                    <button (click)="update()">Submit</button>
+            </div>
+            <span class="name">Price</span>
+            <div class="row">
+                    <div class="price">${{a.totalBookingPrice}}</div>
+            </div>
+            <span class="name">Card No</span>
+            <div class="row">
+                        <div class="price">{{a.cardNo}}</div>
+                </div>
+            </span>
+    </div>
+</div>

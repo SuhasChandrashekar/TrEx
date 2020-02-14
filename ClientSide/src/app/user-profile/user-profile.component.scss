@@ -1,0 +1,60 @@
+.inputSection{
+    display: inline-block;
+    margin-right: 1em;
+  }
+
+  .container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+.box{
+    background-color: #f2f2f2;
+    padding: 5px 20px 5px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    margin-bottom: 30px;
+    margin-right: 11px;
+}
+.input_editoption{
+    width:6em;
+    margin-bottom: 14px;
+  }
+
+  .btn_sty{
+    left: 5em;
+    float: right;
+    background: rgb(211, 58, 58);
+    margin-left: 1em;
+  }
+
+  .container:hover{
+    box-shadow: 0 10px 20px -8px #9a9e9e;
+    cursor: pointer;
+  }
+
+  .name{
+    color:black;
+    font-weight: bold;
+  }
+
+  .price{
+    color: rgba(2, 185, 2, 0.986);
+    margin-left: 10px;
+  }
+  .btn_sty:hover{
+  box-shadow: 0 10px 20px -8px rgb(83, 2, 2);
+  cursor: pointer;
+}
+
+.btn_edit:hover{
+  box-shadow: 0 10px 20px -8px #9a9e9e;
+  cursor: pointer;
+}
+
+.btn_edit{
+  margin-right: 10px;
+}

@@ -1,0 +1,41 @@
+.inputSection{
+    display: inline-block;
+    margin-right: 1em;
+  }
+
+  .container {
+    background-color: #f2f2f2;
+    padding: 5px 20px 15px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    margin-bottom: 40px;
+}
+
+.box {
+    background-color: #f2f2f2;
+    padding: 5px 20px 5px 20px;
+    border: 1px solid lightgrey;
+    border-radius: 3px;
+    margin-bottom: 40px;
+}
+
+.input_editoption{
+    width:20em;
+    margin-right:20px;
+  }
+
+  .btn_sty{
+    left: 5em;
+    position: relative;
+    margin-left: 1em;
+  }
+
+  .userDetail{
+    color:black;
+    font-weight: bold;
+  }
+
+  .upt_btn{
+    float: right;
+    margin-left:940px;
+  }

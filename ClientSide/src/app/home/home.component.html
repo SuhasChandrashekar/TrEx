@@ -1,0 +1,105 @@
+<div id="homeBody" class="homebody_class">
+  <div class="container">
+      <div id="map">
+      </div>
+      <div id="app-cover">
+
+
+
+          <div  class="row toggle_header">
+
+              <div class="col-lg-7 toggle-button-cover">
+
+                  <div class="button-cover">
+                      <div class="toggle_Section"> <h4>Travel</h4></div>
+                      <div class="toggle_Section">
+                          <div class="button r" id="button-1">
+                              <input (change)="T_E_toggle($event)" type="checkbox" id="T_E_checkbox" class="checkbox">
+                              <div class="knobs"></div>
+                              <div class="layer"></div>
+                          </div>
+                      </div>
+                      <div class="toggle_Section"><h4>Experience</h4></div>
+                  </div>
+              </div>
+              <div class="search-wrapper">
+
+                <input type="text" class="form-control" id="search_Entity" placeholder="Search for Events..." autofocus/>
+                 <button class=" search_btnn btn-dark" (click)='searchEvent()'>Search</button>
+
+                   </div>
+          </div>
+
+    <div id="T_Econtainer" class="container">
+
+      <div #elseBlock class="row entity_item"  *ngFor="let a of entity| tediff : queryString | paginate:config">
+              <div class="row" (click)='showMapLocation(a)' >
+                  <div class="col-lg-4 entity_images">
+
+                      <img src="../../assets/images/{{a.imageUrl}}" class=" entity_img img-thumbnail" alt="Responsive image">
+                    </div>
+                  <div class="col-lg-8">
+                      <div class="row">
+                         <h2>
+                          <div class="col-lg-12">{{a.entityName}}</div>
+                        </h2>
+                      </div>
+                      <div class="row">
+                          <div class="col-lg-12">{{a.entityType}}</div>
+                      </div>
+                      <div class="row">
+                          <div class="col-lg-12">{{a.entityAddress}}</div>
+                      </div>
+                      <div class="row">
+
+                          <div class="col-lg-12">{{a.price}}</div>
+                      </div>
+                      <div class="row">
+                          <button id="a._id" (click)="book_ticket(a)" class=" btn btn-dark btn booking_btn">Book</button>
+                      </div>
+
+                  </div>
+
+
+              </div></div>
+              <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+            </div>
+            <div class="searchContainer">
+                <div #elseBlocki class="row entity_item"  *ngFor="let a of entity| searchPipe : searchedValue | paginate:config">
+                    <div class="row" (click)='showMapLocation(a)' >
+                        <div class="col-lg-4 entity_images">
+                            <!-- <img class="entity_img" src="../../assets/images/{{a.imageUrl}}" alt=" no img"> -->
+                            <img src="../../assets/images/{{a.imageUrl}}" class=" entity_img img-thumbnail" alt="Responsive image">
+                          </div>
+                        <div class="col-lg-8">
+                            <div class="row">
+                               <h2>
+                                <div class="col-lg-12">{{a.entityName}}</div>
+                              </h2>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">{{a.entityType}}</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">{{a.entityAddress}}</div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-lg-12">{{a.price}}</div>
+                            </div>
+                            <div class="row">
+                                <button id="a._id" (click)="book_ticket(a)" class=" btn btn-dark btn booking_btn">Book</button>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+            </div>
+      </div>
+  </div>
+</div>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACgsl2TkE6C_oKz9SwJdnCZCKLbss2fyI&callback=initMap">
+</script>

@@ -5,8 +5,8 @@
 'use strict';
 var express = require('express');
 var app = express();
+//using nodemailer to send email after booking is successful
 var nodemailer = require('nodemailer');
-var QRCode = require('qrcode');
 //var QRCode = require("qrcode-svg");
 const mongoose = require('mongoose'),
     BOOKING = mongoose.model('bookings');
@@ -45,25 +45,27 @@ exports.save = function(booking) {
 
     // var svg = new QRCode(booking.bookingId).svg();
 
-
+    // create reusable transporter object using the default SMTP transport
 
     var transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
         port: 465,
-        secure: true,
+        secure: true, // true for 465, false for other ports
         auth: {
             user: 'feedthefarmeraed@gmail.com',
             pass: 'Feedthefarmeraed123!'
         }
     });
+    // send mail with defined transport object
     console.log("Email Sent");
     console.log(booking.userName);
     var mailOptions = {
-        from: 'feedthefarmeraed@gmail.com',
-        to: booking.userName,
+        from: 'feedthefarmeraed@gmail.com', //sender address
+        to: booking.userName, //receiever address
 
-        subject: 'TrEx Booking Successful',
-
+        subject: 'TrEx Booking Successful', //subject line
+        //encoding html with user and booking information
+        //using live qrcode API to generate qrcode for booking ID and attaching it to email
         html: `<h1>Welcome to TrEx ! <br> Your booking was successful !!</h1>` +
             `<p>Name:` + `&nbsp;` + booking.userName + `<br>` + `Phone:` + booking.userPhoneNumber +
             `<br>` + `Booking ID:` + booking.bookingId + `<br>` + `Event Price: ` + booking.totalBookingPrice +

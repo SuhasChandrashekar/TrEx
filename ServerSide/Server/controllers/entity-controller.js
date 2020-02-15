@@ -95,7 +95,7 @@ exports.delete = function (request, response) {
         .then(resolve)
         .catch(renderErrorResponse(response));
 };
-
+//get search List
 exports.searchList = function (request, response) {
     console.log("Suhas searchlist");
     const resolve = (entities) => {

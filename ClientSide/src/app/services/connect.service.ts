@@ -10,11 +10,15 @@ export class ConnectService {
 
   constructor(private http: HttpClient) { }
 
+  // to get all the connects
   getConnect(): Observable<Connect[]> {
     return this.http.get<Connect[]>(this.rootURL+"/connects");
   }
+  // to add the connects
   addConnect(connect: Connect): Observable<Connect> {
     return this.http
       .post<Connect>(this.rootURL+"/connects", connect)
   }
+
+
 }

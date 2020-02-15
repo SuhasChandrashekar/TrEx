@@ -115,7 +115,7 @@ exports.register = function (req, res) {
             res.status(400).send(err);
         });
 }
-
+//Authenticate User
 exports.authenticate = function (req, res) {
     console.log("reached controller auth func");
     userService.authenticate(req.body.username, req.body.password)
@@ -134,7 +134,7 @@ exports.authenticate = function (req, res) {
             res.status(400).send(err);
         });
 }
-
+//Get All Users
 exports.getAll = function (req, res) {
     userService.getAll()
         .then(function (users) {
@@ -144,7 +144,7 @@ exports.getAll = function (req, res) {
             res.status(400).send(err);
         });
 }
-
+//get Current User
 exports.getCurrent = function (req, res) {
     userService.getById(req.user.sub)
         .then(function (user) {

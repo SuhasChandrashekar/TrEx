@@ -15,7 +15,7 @@ let UserSchema = new Schema({
     userPassword: {
         type: String
     },
-    userFirstname: {
+    firstName: {
         type: String
     },
     userLastname: {

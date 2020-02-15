@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../models/user';
 import { UserService } from '../services/user.service'
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-details',
@@ -14,12 +13,9 @@ export class UserDetailsComponent implements OnInit {
   editUser: User
   queryUserString:String;
   user:User;
-  constructor(private userService:UserService,private router:Router) { }
+  constructor(private userService:UserService) { }
 
   ngOnInit() {
-    if(sessionStorage.getItem('currentUser')===null){
-      this.router.navigateByUrl('login');
-    }
     let user=JSON.parse(sessionStorage.getItem('currentUser'));
     this.username=user.username;
     this.get_Users();

@@ -1,12 +1,13 @@
 <div>
     <h2>Booking Details</h2>
 </div>
-
+<!--Below is to print the booking Info-->
+<!--The profile Pipe is used to filter the users to current user-->
 <div *ngFor="let a of bookings | profilePipe : queryMailString">
     <div class="container">
         <span>
-            <span>
-                    <button class="btn_sty btnDanger" title="delete booking" (click)="delete(a)">Cancel Booking</button>
+            <span><!--Function called to delete the booking Info when user cancel the booking-->
+                    <button class="btn_sty btn" title="delete booking" (click)="delete(a)">Cancel Booking</button>
                 <h4>Booking ID : {{a.bookingId}}</h4>
             </span>
             <div class="row">
@@ -26,14 +27,15 @@
                     <div class="col-lg-12">{{a.userAddress}}</div>
             </div>
             <span class="name">Number of Tickets</span>
-            <div>
+            <div><!--Function called to Edit the Ticket Price when user Edit the booking-->
                     <span class="box">
                         <span class="input_editoption" *ngIf="a!==editBooking">{{a.ticketsBooked}}</span>
                         <input class="input_editoption" *ngIf="a===editBooking" [(ngModel)]="a.ticketsBooked"
                             (keyup.enter)="update()">
                     </span>
-                    <button class="btn_edit" (click)="edit(a)">Edit</button>
-                    <button (click)="update()">Submit</button>
+                    <button class="btn_edit btn " (click)="edit(a)">Edit</button>
+                    <!--Function called to update the booking Info when user update the booking-->
+                    <button  class="btn_edit btn "(click)="update()">Submit</button>
             </div>
             <span class="name">Price</span>
             <div class="row">

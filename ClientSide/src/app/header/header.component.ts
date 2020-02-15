@@ -16,7 +16,16 @@ constructor(private router: Router) { }
 
   }
 
-
+  loadHome(){
+    let url="";
+    this.router.navigateByUrl(url).then(e => {
+      if (e) {
+        console.log("Navigation is successful!");
+      } else {
+        console.log("Navigation has failed!");
+      }
+  })
+  }
   logout() {
     // remove user from local storage to log user out
     sessionStorage.removeItem('currentUser');

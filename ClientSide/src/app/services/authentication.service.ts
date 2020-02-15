@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
 export class AuthenticationService {
     public rootURL= "http://localhost:3000";
     constructor(private http: HttpClient) { }
-
+// login functionality
     login(username: string, password: string) {
         return this.http.post<any>(this.rootURL + '/users/authenticate', { username: username, password: password })
             .pipe(map(user => {

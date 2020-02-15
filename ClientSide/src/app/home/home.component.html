@@ -52,10 +52,10 @@
                       </div>
                       <div class="row">
 
-                          <div class="col-lg-12">{{a.price}}</div>
+                          <div class="col-lg-12">{{a.price}} $</div>
                       </div>
                       <div class="row">
-                          <button id="a._id" (click)="book_ticket(a)" class=" btn btn-dark btn booking_btn">Book</button>
+                          <button id="a._id" (click)="book_ticket(a)" class=" btn btn-dark btn booking_btn">View</button>
                       </div>
 
                   </div>
@@ -64,6 +64,7 @@
               </div></div>
               <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
             </div>
+
             <div class="searchContainer">
                 <div #elseBlocki class="row entity_item"  *ngFor="let a of entity| searchPipe : searchedValue | paginate:config">
                     <div class="row" (click)='showMapLocation(a)' >
@@ -98,7 +99,14 @@
 
             </div>
       </div>
+      <div class="search-wrapper">
+        <div id="telegramSection_id" class="telegramSection"><h4>Send query to TrEx Admin</h4>
+        <input type="text" class="form-control tele" id="tele_msg_send" placeholder="Send Request using Telegram" autofocus/>
+         <button class=" search_btnn btn-dark tele_sub" (click)='sendmsgTelegram()'>Send MSG</button>
+        </div>
+      </div>
   </div>
+
 </div>
 
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACgsl2TkE6C_oKz9SwJdnCZCKLbss2fyI&callback=initMap">

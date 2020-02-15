@@ -22,6 +22,18 @@ export class HomeComponent implements OnInit {
    }
 
   ngOnInit() {
+// check the input user
+    if(sessionStorage.getItem('currentUser')== null){
+      var url ="login";
+      this.router.navigateByUrl(url).then(e => {
+        if (e) {
+          console.log("Navigation is successful!");
+        } else {
+          console.log("Navigation has failed!");
+        }
+    })
+    }
+    // to get all entities
     this.get_Entities();
     console.log(this.entity);
     const options = {
@@ -31,10 +43,10 @@ export class HomeComponent implements OnInit {
           lng: -71.0589
       }
     }
-    // New map
+    // loading  New map
     var map = new google.maps.Map(document.getElementById('map'), options);
   }
-
+// subscribing aan  entity
     get_Entities(): void {
       this.entityServies.getEntities().subscribe(entity =>{
         this.entity = entity;
@@ -46,11 +58,12 @@ export class HomeComponent implements OnInit {
           totalItems: this.entityTravelLength
         };
       }
+      // To navigate to next page in pagination
     pageChanged(event){
       this.config.currentPage = event;
     }
 
-
+// To provide toggle functionality between travel and experience
   T_E_toggle(event){
     for (var i = 0; i < this.entity.length; i++){
       var obj = this.entity[i];
@@ -61,6 +74,7 @@ export class HomeComponent implements OnInit {
         }
       }
   }
+  // check for what is selected in toglle button
 if(event.target.checked){
   this.config.totalItems = this.entity.length - this.entityTravelLength ;
 document.getElementById("homeBody").style.backgroundColor="#007bff";
@@ -74,7 +88,7 @@ this.queryString ="Experience";
   this.entityTravelLength=0;
 }
 
-
+ // To navigate to the the Next  bOOking page
 book_ticket(obj: Entity){
   this.entityServies.changeMessage(obj);
   console.log(obj);
@@ -169,10 +183,17 @@ initMap(a) {
 
 searchEvent(a:any) {
 
+  (<HTMLInputElement>document.getElementById('telegramSection_id')).style.display="none";
+  (<HTMLInputElement>document.getElementById('T_Econtainer')).style.display="none";
    this.searchedValue = (<HTMLInputElement>document.getElementById('search_Entity')).value
   this.entityServies.getSearchEntities().subscribe(searchEntity =>{
     this.searchEntity = searchEntity;
     })
+}
+
+sendmsgTelegram(){
+ let msg =  (<HTMLInputElement>document.getElementById('tele_msg_send')).value;
+this.entityServies.sendTelegramMsg(msg);
 }
 
 }

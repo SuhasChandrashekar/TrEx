@@ -7,11 +7,11 @@
             <div>
                 <div>
                     <i class="fa fa-user"></i><span class="userDetail"> Full Name</span>
-                    <button class="upt_btn" (click)="update()">Update</button>
+                    <button class="upt_btn btn" (click)="update()">Update</button>
                 </div>
                 <a (click)="edit(a)">
-                    <span class="input_editoption" *ngIf="a!==editUser">Firstname:{{a.userFirstname}} </span>
-                    <input class="input_editoption" *ngIf="a===editUser" [(ngModel)]="a.userFirstname"
+                    <span class="input_editoption" *ngIf="a!==editUser">Firstname:{{a.firstName}} </span>
+                    <input class="input_editoption" *ngIf="a===editUser" [(ngModel)]="a.firstName"
                         (keyup.enter)="update()">
                 </a>
                 <a (click)="edit(a)">

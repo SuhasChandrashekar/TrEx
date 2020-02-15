@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-
+//Profile Pipe is used to filter the current username
 @Pipe({
   name: 'profilePipe'
 })

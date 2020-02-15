@@ -1,8 +1,10 @@
+/*Below styling is to set the input box*/
 .inputSection{
     display: inline-block;
     margin-right: 1em;
   }
 
+  /*Below styling is for the Booking Info Container*/
   .container {
     background-color: #f2f2f2;
     padding: 5px 20px 15px 20px;
@@ -11,6 +13,8 @@
     margin-bottom: 15px;
     font-size: 13px;
 }
+
+/*Below styling is to set the input box*/
 .box{
     background-color: #f2f2f2;
     padding: 5px 20px 5px 20px;
@@ -19,42 +23,54 @@
     margin-bottom: 30px;
     margin-right: 11px;
 }
+
 .input_editoption{
     width:6em;
     margin-bottom: 14px;
   }
 
+  /*Below styling is for the Update button*/
   .btn_sty{
     left: 5em;
     float: right;
-    background: rgb(211, 58, 58);
+    background: #3a3937;
     margin-left: 1em;
+    color: white;
   }
 
+  /*Below styling is for the container when the user hover the booking Info*/
   .container:hover{
     box-shadow: 0 10px 20px -8px #9a9e9e;
     cursor: pointer;
   }
 
+  /*Below styling is for Booking Attribute Headings*/
   .name{
     color:black;
     font-weight: bold;
   }
 
+  /*Below styling is for Price*/
   .price{
     color: rgba(2, 185, 2, 0.986);
     margin-left: 10px;
   }
+
+  /*Below styling is for the Update button when user hover the button*/
   .btn_sty:hover{
-  box-shadow: 0 10px 20px -8px rgb(83, 2, 2);
+  box-shadow: 0 10px 20px -8px #3a3937;
   cursor: pointer;
 }
 
+/*Below styling is for the Edit button* when the user hover the button*/
 .btn_edit:hover{
   box-shadow: 0 10px 20px -8px #9a9e9e;
   cursor: pointer;
 }
 
+/*Below styling is for the Edit button*/
 .btn_edit{
   margin-right: 10px;
+  color: white;
+  background: #3a3937;
 }

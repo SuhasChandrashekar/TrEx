@@ -34,7 +34,7 @@
     "bootstrap-loader": "^3.0.4",
     "compass-mixins": "^0.12.10",
     "font-awesome": "^4.7.0",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.3.1",
     "ngx-pagination": "^4.1.0",
     "particlesjs": "^2.2.3",
     "reframe.js": "^2.2.6",
